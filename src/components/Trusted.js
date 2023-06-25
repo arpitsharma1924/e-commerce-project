@@ -1,0 +1,101 @@
+import React from "react";
+import styled from "styled-components";
+
+const Trusted = () => {
+  return (
+    <Wrapper className="brand-section">
+      <div className="container">
+        <h3>Trusted by 100+ companies.</h3>
+        <div className="scroll-horizontal">
+          <div className="item">
+            <img
+              src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png"
+              alt="trusted-brands"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png"
+              alt="trusted-brands"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png"
+              alt="trusted-brands"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png"
+              alt="trusted-brands"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image8.png"
+              alt="trusted-brands"
+            />
+          </div>
+          <div className="item">
+            <img
+              src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image8.png"
+              alt="trusted-brands"
+            />
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  );
+};
+const Wrapper = styled.section`
+  padding: 4.5rem 0rem 0rem 0rem ;
+  margin: 4.5rem 0rem 0rem 0rem;
+  background-color: ${({ theme }) => theme.colors.bg};
+
+  .brand-section {
+    padding: 12rem 0 0 0;
+  }
+  h3 {
+    text-align: center;
+    text-transform: capitalize;
+    color: ${({ theme }) => theme.colors.text};
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  img {
+    min-width: 10rem;
+    height: 10rem;
+  }
+
+  .scroll-horizontal {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    .scroll-horizontal {
+      display: flex;
+      overflow-x: scroll;
+      padding: 25px;
+      width: auto;
+      scroll-snap-type: x mandatory;
+      scroll-padding: 24px;
+      border-radius: 10px;
+      gap: 10px;
+      /* border: gray 1px solid; */
+    }
+    .item {
+      flex: 0 0 auto;
+      padding: 25px;
+      border: #e40046 1px solid;
+      border-radius: 10px;
+      scroll-snap-align: start;
+    }
+  }
+`;
+
+export default Trusted;
